@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>@ViewData["Title"] - EltaWebApplication</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <script>
+        var elem = document.documentElement;
+        function openFullscreen() {
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+            } else if (elem.mozRequestFullScreen) { /* Firefox */
+                elem.mozRequestFullScreen();
+            } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+                elem.webkitRequestFullscreen();
+            } else if (elem.msRequestFullscreen) { /* IE/Edge */
+                elem.msRequestFullscreen();
+            }
+            var x = document.getElementById("buttonFull");
+            x.style.display = "none";
+
+            var x = document.getElementById("buttonNormal");
+            x.style.display = "block";
+        }
+
+        function closeFullscreen() {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            } else if (document.mozCancelFullScreen) {
+                document.mozCancelFullScreen();
+            } else if (document.webkitExitFullscreen) {
+                document.webkitExitFullscreen();
+            } else if (document.msExitFullscreen) {
+                document.msExitFullscreen();
+            }
+
+            var x = document.getElementById("buttonFull");
+            x.style.display = "block";
+
+            var x = document.getElementById("buttonNormal");
+            x.style.display = "none";
+        }
+    </script>
+   
+</head>
+
+
+<body style="background-color:black;">
+    
+    
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom border-dark box-shadow mb-3 sticky-top" style="background-image:linear-gradient(to bottom right, black, #2d2b2b)">
+            <div class="container">
+                <a class="navbar-brand" asp-page="/Index">
+                    <img src="~/images/logo4.png" />
+                </a>
+
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-page="/Description">Περιγραφή</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-page="/Index">Υπηρεσίες</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-page="/Debug/Index">Παραδείγματα</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-page="/Privacy">Privacy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-page="/SignIn/Page_SignIn">Είσοδος</a>
+                        </li>
+                        <li class="nav-item">
+
+                            <img id="buttonFull" src="~/images/icons8-fit-to-width-30.png" onclick="openFullscreen();" style="width:15px; height:15px; margin-top:13px; margin-left:10px; opacity:0.3" />
+                            <img id="buttonNormal" src="~/images/icons8-fit-to-width-30.png" onclick="closeFullscreen();" style="width:15px; height:15px; margin-top:13px; margin-left:10px; display:none" />
+
+
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+        
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top border-dark footer text-muted">
+        <div class="container">
+            &copy; 2019-@DateTime.Now.Year - Data 2 Action - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

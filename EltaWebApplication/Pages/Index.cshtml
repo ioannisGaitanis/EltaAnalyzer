@@ -1,0 +1,105 @@
+﻿@page 
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+    <style>
+
+        .video-background-holder {
+            position:   static;
+            
+            height: calc(85vh - 72px);
+            min-height: 20rem;
+            width: 100%;
+            overflow: hidden;
+        }
+
+            .video-background-holder video {
+                position:   absolute;
+                top: 50%;
+                left: 50%;
+                min-width: 100%;
+                min-height: 100%;
+                width:  inherit;
+                height:100%;
+                z-index: 0;
+                -ms-transform: translateX(-50%) translateY(-50%);
+                -moz-transform: translateX(-50%) translateY(-50%);
+                -webkit-transform: translateX(-50%) translateY(-50%);
+                transform: translateX(-50%) translateY(-50%);
+                opacity:0.2;
+            }
+
+        .video-background-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .video-background-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: black;
+            opacity: 0.5;
+            z-index: 1;
+        }
+
+        /*
+*
+* ==========================================
+* FOR DEMO PURPOSES
+* ==========================================
+*
+*/
+
+        code {
+            padding: 0 0.15rem;
+            background: #f5f5f5;
+            border-radius: 0.2rem;
+        }
+
+.glow {
+  font-size: 80px;
+  color: #6360b4;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #6360b4, 0 0 40px #e60073, 0 0 50px #4cff00, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+    </style>
+    
+    <div class="container d-flex h-100 align-items-center">
+        <div class="container" >
+            <div class="mx-auto text-center">
+                <div class="video-background-holder" >
+                    <div class="video-background-overlay"></div>
+                    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+                        <source src="~/images/video.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-background-content container h-100">
+                        <div class="d-flex h-100 text-center align-items-center">
+                            <div class="w-100 text-white">
+                                <h1 class="glow" style="margin-bottom:50px">DATA TO ACTION</h1>
+                                <div class="text-white-50 mx-auto" style="font-size:30px;">Χρησιμοποιήστε τα δεδομένα σας με τον αποδοτικότερο τρόπο</div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+

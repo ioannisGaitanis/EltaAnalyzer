@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EltaWebApplication", "EltaWebApplication\EltaWebApplication.csproj", "{70EE1619-80A5-471C-AC23-05C7471EA0F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{09D4DDF6-DE25-4435-A31D-61EF0BD064F3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{70EE1619-80A5-471C-AC23-05C7471EA0F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70EE1619-80A5-471C-AC23-05C7471EA0F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70EE1619-80A5-471C-AC23-05C7471EA0F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70EE1619-80A5-471C-AC23-05C7471EA0F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09D4DDF6-DE25-4435-A31D-61EF0BD064F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09D4DDF6-DE25-4435-A31D-61EF0BD064F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09D4DDF6-DE25-4435-A31D-61EF0BD064F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09D4DDF6-DE25-4435-A31D-61EF0BD064F3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0CCCAEF9-5456-4C73-9468-6F6226967D9C}
+	EndGlobalSection
+EndGlobal
